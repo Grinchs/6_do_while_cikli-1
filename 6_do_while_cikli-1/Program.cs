@@ -1,21 +1,23 @@
-﻿using System;
-
 class Program
 {
     static void Main()
     {
-        string pareizaParole = "Gatis"; 
+        System.Console.WriteLine("Ievadiet garumu trijstūrim:");
+        int rinduSkaitis = int.Parse(System.Console.ReadLine());
 
-        Console.WriteLine("Ievadiet paroli: ");
-        string ievaditaParole = Console.ReadLine();
-
-        while (ievaditaParole != pareizaParole)
+        int rinda = 1;
+        while (rinda <= rinduSkaitis)
         {
-            Console.WriteLine("Parole ir ievadita nepareizi!");
-            ievaditaParole = Console.ReadLine();
+            int kolonna = 1;
+            while (kolonna <= rinda)
+            {
+                System.Console.Write("* ");
+                kolonna++;
+            }
+            System.Console.WriteLine();
+            rinda++;
         }
 
-        Console.WriteLine("Parole ir ievadita pareizi!");
-        Console.ReadLine();
+        System.Console.ReadLine();
     }
 }
